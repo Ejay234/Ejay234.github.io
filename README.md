@@ -1,5 +1,6 @@
 # Ejay234.github.io
 <h2>Profile</h2>
+<a href="AGUIRRE_Ejay_HeadshotPhoto.JPEG"><img src="AGUIRRE_Ejay_HeadshotPhoto.JPEG" width=320px height=480px"> </a>
 <p> 
 My name is Ejay Aguirre, and I am a student at the University of Utah majoring in Data Science. My academic and creative work is rooted in a deep commitment to community, environmental justice, and cultural storytelling. I’ve had the opportunity to work on projects that blend technology, design, and research. Some examples include visualizing environmental data and analyzing soil and climate data to inform sustainable practices. I was a CI Compass Fellow where I learned many things about cyberinfrastructure which exposed me in experiences and knowledge in Python and Jupyter Notebooks. 
 </p>
