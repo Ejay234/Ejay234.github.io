@@ -2,7 +2,7 @@
 <h2>Profile</h2>
 <div>
   <div>
-    <a href="AGUIRRE_Ejay_HeadshotPhoto.JPEG"><img src="AGUIRRE_Ejay_HeadshotPhoto.JPEG" width=180px height=180px></a>
+    <a href="AGUIRRE_Ejay_HeadshotPhoto.JPEG"><img src="AGUIRRE_Ejay_HeadshotPhoto.JPEG" width=230px height=350></a>
   </div>
   <div>
     <p> 
