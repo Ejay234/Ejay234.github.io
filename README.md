@@ -2,12 +2,12 @@
 <section>
     <h1>Ejay Aguirre</h1>
     <a href="AGUIRRE_Ejay_HeadshotPhoto.JPEG"> <img src="AGUIRRE_Ejay_HeadshotPhoto.JPEG" width=180px height=280px> </a>
-    <p>Designer | Data Scientist | Storyteller</p>
-    <nav>
+    <p>
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#creative">Creative</a>
-      <a href="#contact">Contact</a>
+      | <a href="#projects">Projects</a>
+      | <a href="#creative">Creative</a>
+      | <a href="#contact">Contact</a>
+    </p>
 </section>
 
   <section id="about">
