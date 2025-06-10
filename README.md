@@ -50,4 +50,3 @@
 <section>
     <p>&copy; 2025 Ejay Aguirre</p>
 </section>
-</body>
