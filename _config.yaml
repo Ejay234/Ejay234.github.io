@@ -1,3 +1,9 @@
-title: "Ejay Aguirre's Personal Website"
-logo: "AGUIRRE_Ejay_Logo.png"
+title: "Ejay Aguirre"
 theme: jekyll-theme-minimal
+
+exclude:
+  - README.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
