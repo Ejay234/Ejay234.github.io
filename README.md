@@ -47,7 +47,7 @@
       <p><a href="AGUIRRE_EJAY_CV.pdf" download>Download My CV (PDF)</a></p>
   </section>
 
-  <footer>
+<section>
     <p>&copy; 2025 Ejay Aguirre</p>
-  </footer>
+</section>
 </body>
