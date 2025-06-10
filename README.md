@@ -1,5 +1,5 @@
 # Ejay234.github.io
-<header>
+<section>
     <h1>Ejay Aguirre</h1>
     <a href="AGUIRRE_Ejay_HeadshotPhoto.JPEG"> <img src="AGUIRRE_Ejay_HeadshotPhoto.JPEG" width=180px height=280px> </a>
     <p>Designer | Data Scientist | Storyteller</p>
@@ -8,8 +8,7 @@
       <a href="#projects">Projects</a>
       <a href="#creative">Creative</a>
       <a href="#contact">Contact</a>
-    </nav>
-  </header>
+</section>
 
   <section id="about">
     <h2>About Me</h2>
@@ -45,6 +44,7 @@
       <a href="www.linkedin.com/in/ejay-aguirre-797828222">LinkedIn</a>
       | <a href="https://github.com/Ejay234">GitHub</a>
     </p>
+      <p><a href="AGUIRRE_EJAY_CV.pdf" download>Download My CV (PDF)</a></p>
   </section>
 
   <footer>
