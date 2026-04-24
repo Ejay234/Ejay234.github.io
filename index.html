@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejay Aguirre — Data Science & Environmental Sustainability</title>
+  <meta name="description"
+    content="Personal website of Ejay Aguirre — Data Science major and Environmental Sustainability Studies minor at the University of Utah. Born and raised in Saipan, CNMI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">EA<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+          <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Mobile Menu Overlay ===== -->
+  <div id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero" class="hero">
+    <!-- Animated waves at the bottom -->
+    <div class="hero-waves">
+      <svg class="wave wave-1" viewBox="0 0 1440 180" preserveAspectRatio="none">
+        <path d="M0,80 C360,160 1080,0 1440,80 L1440,180 L0,180 Z" />
+      </svg>
+      <svg class="wave wave-2" viewBox="0 0 1440 180" preserveAspectRatio="none">
+        <path d="M0,100 C320,20 720,160 1440,60 L1440,180 L0,180 Z" />
+      </svg>
+      <svg class="wave wave-3" viewBox="0 0 1440 180" preserveAspectRatio="none">
+        <path d="M0,120 C480,40 960,140 1440,100 L1440,180 L0,180 Z" />
+      </svg>
+    </div>
+    <!-- Decorative palm tree silhouette -->
+    <div class="hero-palm left" aria-hidden="true">
+      <svg viewBox="0 0 120 200" fill="currentColor">
+        <path d="M58,200 L62,200 L62,90 Q63,85 60,80 Q57,85 58,90 Z" />
+        <path d="M60,82 Q30,60 5,70 Q30,65 55,80 Z" />
+        <path d="M60,78 Q40,40 15,30 Q42,42 58,75 Z" />
+        <path d="M60,82 Q90,60 115,70 Q90,65 65,80 Z" />
+        <path d="M60,78 Q80,40 105,30 Q78,42 62,75 Z" />
+        <path d="M60,75 Q55,30 45,5 Q58,35 61,72 Z" />
+        <path d="M60,75 Q65,30 75,5 Q62,35 59,72 Z" />
+      </svg>
+    </div>
+    <div class="hero-palm right" aria-hidden="true">
+      <svg viewBox="0 0 120 200" fill="currentColor">
+        <path d="M58,200 L62,200 L62,90 Q63,85 60,80 Q57,85 58,90 Z" />
+        <path d="M60,82 Q30,60 5,70 Q30,65 55,80 Z" />
+        <path d="M60,78 Q40,40 15,30 Q42,42 58,75 Z" />
+        <path d="M60,82 Q90,60 115,70 Q90,65 65,80 Z" />
+        <path d="M60,78 Q80,40 105,30 Q78,42 62,75 Z" />
+        <path d="M60,75 Q55,30 45,5 Q58,35 61,72 Z" />
+        <path d="M60,75 Q65,30 75,5 Q62,35 59,72 Z" />
+      </svg>
+    </div>
+    <!-- Stars (dark mode only) -->
+    <div class="hero-stars" aria-hidden="true">
+      <span class="star" style="top:8%;left:10%;animation-delay:0s;"></span>
+      <span class="star" style="top:15%;left:25%;animation-delay:1.2s;"></span>
+      <span class="star" style="top:5%;left:50%;animation-delay:0.5s;"></span>
+      <span class="star" style="top:20%;left:70%;animation-delay:1.8s;"></span>
+      <span class="star" style="top:10%;left:85%;animation-delay:0.8s;"></span>
+      <span class="star" style="top:25%;left:40%;animation-delay:2.1s;"></span>
+      <span class="star" style="top:12%;left:60%;animation-delay:1.5s;"></span>
+      <span class="star" style="top:30%;left:15%;animation-delay:0.3s;"></span>
+      <span class="star" style="top:18%;left:90%;animation-delay:2.5s;"></span>
+      <span class="star" style="top:35%;left:78%;animation-delay:1.0s;"></span>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Ejay Aguirre</h1>
+      <p class="hero-tagline">Data Science · Environmental Sustainability</p>
+      <p class="hero-school">
+        <span class="icon">🏝️</span> University of Utah · <em>from Saipan, CNMI</em>
+      </p>
+      <div class="hero-cta">
+        <a href="#resume" class="btn btn-primary">View Resume</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a <strong>Data Science</strong> major with a minor in
+            <strong>Environmental Sustainability Studies</strong> at the
+            <strong>University of Utah</strong>. Born and raised on the island of
+            <strong>Saipan</strong> in the Commonwealth of the Northern Mariana Islands,
+            I bring an island perspective to everything I do.
+          </p>
+          <p>
+            I'm deeply interested in <strong>interdisciplinary work</strong>, using
+            data science as a bridge across fields like environmental science,
+            public health, and sustainability. I believe the most meaningful
+            insights come from connecting disciplines, and I'm driven to apply
+            data-driven approaches to real-world challenges that span traditional
+            boundaries.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-icon">📊</span>
+            <div>
+              <h3>Data Science</h3>
+              <p>Major</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🌱</span>
+            <div>
+              <h3>Environmental Sustainability</h3>
+              <p>Minor</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🎓</span>
+            <div>
+              <h3>University of Utah</h3>
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🏝️</span>
+            <div>
+              <h3>Saipan, CNMI</h3>
+              <p>Hometown</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Resume Section ===== -->
+  <section id="resume" class="section resume">
+    <div class="container">
+      <h2 class="section-title">Resume</h2>
+      <div class="resume-actions">
+        <a href="AguirreEjay_Resume.pdf" download class="btn btn-primary" id="download-resume-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download PDF
+        </a>
+      </div>
+
+      <!-- Resume Content -->
+      <div class="resume-content" id="resume-content">
+
+        <!-- Education -->
+        <div class="resume-block">
+          <h3 class="resume-block-title">Education</h3>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>Kahlert School of Computing, University of Utah</h4>
+                <p class="resume-subtitle">B.S. Data Science · Minor in Environmental Sustainability Studies</p>
+              </div>
+              <span class="resume-date">Salt Lake City, UT</span>
+            </div>
+          </div>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>Northern Marianas College</h4>
+                <p class="resume-subtitle">A.A. Liberal Arts, Emphasis in Pre-Engineering · Magna Cum Laude Honors</p>
+              </div>
+              <span class="resume-date">May 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Employment -->
+        <div class="resume-block">
+          <h3 class="resume-block-title">Employment</h3>
+
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>University of Utah — Neuroergonomics and Occupational Biomechanics Laboratory</h4>
+                <p class="resume-subtitle">Research Assistant</p>
+              </div>
+              <span class="resume-date">Apr 2025 — Present</span>
+            </div>
+            <div class="resume-item-body">
+              <ul>
+                <li>Proposed an independent research project on occupational noise, muscle fatigue, and EMG analysis that was accepted for funding.</li>
+                <li>Collected and supported experimental data acquisition using Biosemi and E-Prime systems.</li>
+                <li>Analyzed EMG and biomechanical signals in MATLAB/EEGLAB to investigate workplace conditions' effects on muscle fatigue.</li>
+                <li>Presented findings at the U of U Undergraduate Research Symposium and Rocky Mountain ASB regional meeting.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>University of Utah Health</h4>
+                <p class="resume-subtitle">IT Support Technician</p>
+              </div>
+              <span class="resume-date">Oct 2025 — Mar 2026</span>
+            </div>
+            <div class="resume-item-body">
+              <ul>
+                <li>Supported SharePoint Online migration workflows, including site provisioning, permissions mapping, and data transfers.</li>
+                <li>Triaged IT tickets and documented fixes to build repeatable workflows for SharePoint/OneDrive support.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>Ocean Observatories Initiative</h4>
+                <p class="resume-subtitle">Data Analyst Intern</p>
+              </div>
+              <span class="resume-date">Jun 2025 — Aug 2025</span>
+            </div>
+            <div class="resume-item-body">
+              <ul>
+                <li>Developed Python scripts and Jupyter Notebook pipelines to retrieve, clean, and aggregate ~12 years of in-situ water temperature and CTD data via APIs and ERDDAP.</li>
+                <li>Created publication-quality plots in Matplotlib &amp; ggplot, overlaying ENSO phases on temperature trends.</li>
+                <li>Authored comprehensive documentation of ETL-style notebooks for interdisciplinary research teams.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>C.O.M.P.A.S.S | Alternative REU</h4>
+                <p class="resume-subtitle">Data Researcher Lead Intern</p>
+              </div>
+              <span class="resume-date">Jun 2024 — Aug 2024</span>
+            </div>
+            <div class="resume-item-body">
+              <ul>
+                <li>Designed and implemented a green roof model analyzing soil composition, moisture retention, and evapotranspiration for stormwater management research.</li>
+                <li>Conducted correlation and t-test analyses in Python; authored a research chapter for future publication.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h4>University Centers for Excellence in Developmental Disabilities</h4>
+                <p class="resume-subtitle">Student Trainee</p>
+              </div>
+              <span class="resume-date">Jun 2023 — Jan 2024</span>
+            </div>
+            <div class="resume-item-body">
+              <ul>
+                <li>Assessed educational and assistive-technology needs of individuals with developmental disabilities.</li>
+                <li>Collaborated with interdisciplinary professionals and community advocates to design inclusive support solutions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-subtitle">I'm always open to new opportunities, collaborations, and conversations.</p>
+      <div class="contact-links">
+        <a href="https://github.com/Ejay234" target="_blank" rel="noopener" class="contact-card" id="link-github">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/ejay-aguirre-797828222" target="_blank" rel="noopener" class="contact-card" id="link-linkedin">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:ejay.aguirre03@gmail.com" class="contact-card" id="link-email">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 Ejay Aguirre. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
