@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejay Aguirre — Data Science & Environmental Sustainability</title>
+  <title>Ejay Aguirre — Data Science &amp; Environmental Sustainability</title>
   <meta name="description"
-    content="Personal website of Ejay Aguirre — Data Science major and Environmental Sustainability Studies minor at the University of Utah. Born and raised in Saipan, CNMI." />
+    content="Personal website of Ejay Aguirre — Data Science major and Environmental Sustainability Studies minor at the University of Utah. Born and raised in Saipan, CNMI. NASA Space Grant Scholar." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -17,13 +17,19 @@
 
 <body>
 
+  <!-- ===== Scroll Progress Bar ===== -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
   <!-- ===== Navigation ===== -->
   <nav id="navbar" class="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">EA<span class="accent">.</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#leadership">Leadership</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -56,7 +62,10 @@
   <div id="mobile-menu" class="mobile-menu">
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#leadership">Leadership</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -115,12 +124,31 @@
     <div class="hero-content">
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name">Ejay Aguirre</h1>
-      <p class="hero-tagline">Data Science · Environmental Sustainability</p>
+      <p class="hero-tagline">
+        <span id="typed-text" class="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
       <p class="hero-school">
         <span class="icon">🏝️</span> University of Utah · <em>from Saipan, CNMI</em>
       </p>
+      <!-- Stats row -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">10+</span>
+          <span class="hero-stat-label">Roles &amp; Internships</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">6+</span>
+          <span class="hero-stat-label">Scholarships</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Countries</span>
+        </div>
+      </div>
       <div class="hero-cta">
-        <a href="#resume" class="btn btn-primary">View Resume</a>
+        <a href="AGUIRRE_Resume.pdf" download class="btn btn-primary">Download Resume</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
@@ -133,6 +161,7 @@
   <!-- ===== About Section ===== -->
   <section id="about" class="section about">
     <div class="container">
+      <p class="section-number">01</p>
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
         <div class="about-text">
@@ -141,15 +170,23 @@
             <strong>Environmental Sustainability Studies</strong> at the
             <strong>University of Utah</strong>. Born and raised on the island of
             <strong>Saipan</strong> in the Commonwealth of the Northern Mariana Islands,
-            I bring an island perspective to everything I do.
+            I bring a Pacific island perspective to everything I do.
           </p>
           <p>
-            I'm deeply interested in <strong>interdisciplinary work</strong>, using
+            I'm deeply interested in <strong>interdisciplinary work</strong> — using
             data science as a bridge across fields like environmental science,
-            public health, and sustainability. I believe the most meaningful
-            insights come from connecting disciplines, and I'm driven to apply
-            data-driven approaches to real-world challenges that span traditional
-            boundaries.
+            public health, and geospatial analytics. From analyzing 12 years of ocean
+            temperature data at the <strong>Ocean Observatories Initiative</strong>
+            to building GIS asset management systems at
+            <strong>Wasatch Community Gardens</strong>, I'm driven to apply
+            data-driven approaches to real-world challenges.
+          </p>
+          <p>
+            I've had the opportunity to study internationally at
+            <strong>Singapore Management University</strong> as a
+            <strong>Benjamin A. Gilman Scholar</strong>, and I'm proud to also be a
+            <strong>NASA Space Grant Consortium Scholar</strong> and
+            <strong>Generation Next Scholar</strong>.
           </p>
         </div>
         <div class="about-highlights">
@@ -157,7 +194,7 @@
             <span class="highlight-icon">📊</span>
             <div>
               <h3>Data Science</h3>
-              <p>Major</p>
+              <p>Major · University of Utah</p>
             </div>
           </div>
           <div class="highlight-card">
@@ -168,10 +205,17 @@
             </div>
           </div>
           <div class="highlight-card">
-            <span class="highlight-icon">🎓</span>
+            <span class="highlight-icon">🚀</span>
             <div>
-              <h3>University of Utah</h3>
-              <p>Student</p>
+              <h3>NASA Space Grant Scholar</h3>
+              <p>Consortium Scholar</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🌏</span>
+            <div>
+              <h3>Gilman International Scholar</h3>
+              <p>Singapore Management University</p>
             </div>
           </div>
           <div class="highlight-card">
@@ -186,132 +230,323 @@
     </div>
   </section>
 
-  <!-- ===== Resume Section ===== -->
-  <section id="resume" class="section resume">
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="section skills">
     <div class="container">
-      <h2 class="section-title">Resume</h2>
-      <div class="resume-actions">
-        <a href="AguirreEjay_Resume.pdf" download class="btn btn-primary" id="download-resume-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          Download PDF
-        </a>
-      </div>
+      <p class="section-number">02</p>
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-categories">
 
-      <!-- Resume Content -->
-      <div class="resume-content" id="resume-content">
-
-        <!-- Education -->
-        <div class="resume-block">
-          <h3 class="resume-block-title">Education</h3>
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>Kahlert School of Computing, University of Utah</h4>
-                <p class="resume-subtitle">B.S. Data Science · Minor in Environmental Sustainability Studies</p>
-              </div>
-              <span class="resume-date">Salt Lake City, UT</span>
-            </div>
+        <div class="skill-category">
+          <h3 class="skill-category-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Technical
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">APIs</span>
+            <span class="skill-tag">GIS</span>
+            <span class="skill-tag">ArcGIS Pro</span>
+            <span class="skill-tag">ArcGIS Online</span>
           </div>
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>Northern Marianas College</h4>
-                <p class="resume-subtitle">A.A. Liberal Arts, Emphasis in Pre-Engineering · Magna Cum Laude Honors</p>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-category-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            Data Science
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Data Cleaning &amp; Preprocessing</span>
+            <span class="skill-tag">Time-Series Analysis</span>
+            <span class="skill-tag">Statistical Analysis</span>
+            <span class="skill-tag">ETL Pipelines</span>
+            <span class="skill-tag">ERDDAP</span>
+            <span class="skill-tag">EEGLab</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">ggplot2</span>
+            <span class="skill-tag">Reproducible Workflows</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-category-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            General
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Research &amp; Documentation</span>
+            <span class="skill-tag">Technical Communication</span>
+            <span class="skill-tag">Salesforce</span>
+            <span class="skill-tag">SharePoint</span>
+            <span class="skill-tag">Microsoft Office</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience Section ===== -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <p class="section-number">03</p>
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <!-- Neuroergonomics Lab -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Apr 2025 — Present</span>
+                <span class="timeline-badge">Research</span>
               </div>
-              <span class="resume-date">May 2022</span>
+              <h3 class="timeline-org">Neuroergonomics &amp; Occupational Biomechanics Lab</h3>
+              <p class="timeline-role">Research Assistant · University of Utah · Salt Lake City, UT</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Proposed an independent research project on occupational noise, muscle fatigue, and EMG analysis that was accepted for funding, supporting the lab's broader work on worker safety and ergonomics.</li>
+              <li>Collected and supported experimental data acquisition using Biosemi and E-Prime systems to support ongoing research projects from senior researchers.</li>
+              <li>Analyzed EMG and biomechanical data using MATLAB and the EEGLab Library to investigate occupational ergonomics and human performance.</li>
+              <li>Presented early findings at the University of Utah Undergraduate Research Symposium and the Rocky Mountain American Society of Biomechanics regional meeting.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Wasatch Community Gardens -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">May 2026 — Jul 2026</span>
+                <span class="timeline-badge">GIS</span>
+              </div>
+              <h3 class="timeline-org">Wasatch Community Gardens</h3>
+              <p class="timeline-role">GIS Intern · Salt Lake City, UT</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built a GIS asset management system to map irrigation, garden beds, utilities, and infrastructure across four community garden sites using ArcGIS Pro, ArcGIS Online, and Field Maps.</li>
+              <li>Designed a 12-layer geodatabase with coded-value domains, standardized field forms, editor tracking, photo attachments, and automated geometry calculations.</li>
+              <li>Collected, validated, and visualized GPS and infrastructure data to produce public-facing and technical maps supporting site operations and long-term planning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- University of Utah Health -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Oct 2025 — Mar 2026</span>
+                <span class="timeline-badge">IT</span>
+              </div>
+              <h3 class="timeline-org">University of Utah Health</h3>
+              <p class="timeline-role">IT Support Technician · Salt Lake City, UT</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Supported SharePoint Online migration workflows, including site provisioning, permissions mapping, and data transfers, ensuring data integrity through validation checks.</li>
+              <li>Triaged IT tickets and walked users through SharePoint/OneDrive basics, escalating cases and documenting fixes to build repeatable workflows.</li>
+              <li>Documented and standardized recurring technical issues and resolutions, improving troubleshooting efficiency and creating reusable support workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ocean Observatories Initiative -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jun 2025 — Aug 2025</span>
+                <span class="timeline-badge">Data</span>
+              </div>
+              <h3 class="timeline-org">Ocean Observatories Initiative</h3>
+              <p class="timeline-role">Data Analyst Intern · Woods Hole, MA</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed Python scripts and Jupyter Notebook pipelines to retrieve, clean, and aggregate ~12 years of in-situ water temperature and CTD data via ERDDAP, streamlining time-series data.</li>
+              <li>Implemented quality control across ETL workflows in Python to verify data integrity, catching inconsistencies in time-series data pulled via ERDDAP and APIs.</li>
+              <li>Created publication-quality plots in Matplotlib &amp; ggplot, overlaying ENSO phases on temperature trends across multiple stations.</li>
+              <li>Authored comprehensive documentation of ETL-style notebooks, ensuring reproducibility and handoff readiness for interdisciplinary research teams.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CI Compass -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jan 2025 — Apr 2025</span>
+                <span class="timeline-badge">Fellowship</span>
+              </div>
+              <h3 class="timeline-org">CI Compass</h3>
+              <p class="timeline-role">Student Fellow · Salt Lake City, UT</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engaged in a 12-week program focusing on technical and research skills relevant to cyberinfrastructure and data-intensive research.</li>
+              <li>Gained contextual understanding of Major Facilities and the data lifecycle, enhancing ability to support collaboration and inquiry.</li>
+              <li>Collaborated with peers and mentors to apply learned skills in real-world scenarios, preparing for future roles in cyberinfrastructure and scientific computing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Center for Student Access & Resources -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Sep 2024 — Apr 2025</span>
+                <span class="timeline-badge">Mentorship</span>
+              </div>
+              <h3 class="timeline-org">Center for Student Access &amp; Resources</h3>
+              <p class="timeline-role">Peer Mentor · Salt Lake City, UT</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Mentored undergraduate students through personalized academic planning, time management strategies, and guidance on utilizing university resources.</li>
+              <li>Organized peer group meetings, socials, and workshops in collaboration with staff, cultivating a supportive community and increasing student engagement.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Salt Lake City Corporation -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Sep 2024 — Jan 2025</span>
+                <span class="timeline-badge">Government</span>
+              </div>
+              <h3 class="timeline-org">Salt Lake City Corporation</h3>
+              <p class="timeline-role">Constituent Liaison Intern · Salt Lake City, UT</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Managed constituent inquiries and concerns using Salesforce to track case statuses and streamline communication between city officials and the public.</li>
+              <li>Prepared detailed reports and case studies for city officials using Microsoft Office tools to analyze data, summarize local issues, and propose actionable solutions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- C.O.M.P.A.S.S -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jun 2024 — Aug 2024</span>
+                <span class="timeline-badge">Research</span>
+              </div>
+              <h3 class="timeline-org">C.O.M.P.A.S.S | Alternative REU</h3>
+              <p class="timeline-role">Data Researcher Lead Intern · Saipan, MP</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and implemented a green roof model analyzing soil composition, moisture retention, and evapotranspiration, supporting stormwater management research for rural development.</li>
+              <li>Conducted correlation and t-test analyses in Python, interpreting results to inform actionable conclusions; authored a research chapter for future publication.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- UCEDD -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jun 2023 — Jan 2024</span>
+                <span class="timeline-badge">Healthcare</span>
+              </div>
+              <h3 class="timeline-org">University Centers for Excellence in Developmental Disabilities</h3>
+              <p class="timeline-role">Student Trainee · Hawaii, HI</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Evaluated the educational and technological needs of individuals with disabilities, ensuring compliance with cultural competence, ethical standards, and developmental disability policies.</li>
+              <li>Collaborated with professionals and advocates to identify and implement solutions, enhancing cross-disciplinary communication and inclusivity best practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- S.P.I.C.E -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-date">May 2023 — Jul 2023</span>
+                <span class="timeline-badge">Research</span>
+              </div>
+              <h3 class="timeline-org">S.P.I.C.E Data Science Institute</h3>
+              <p class="timeline-role">Data Researcher Intern · Hawaii, HI</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Analyzed datasets on avian elevation and malaria correlations, creating visualizations with graphic design tools to effectively communicate findings.</li>
+              <li>Utilized R and Texas Advanced Community Centers (TACC) software to process research data, demonstrating the ecological impact of bird elevation on avian malaria infection rates.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Education Section ===== -->
+  <section id="education" class="section education">
+    <div class="container">
+      <p class="section-number">04</p>
+      <h2 class="section-title">Education</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3>Kahlert School of Computing, University of Utah</h3>
+            <p class="edu-degree">B.S. in Data Science · Minor in Environmental Sustainability Studies</p>
+            <p class="edu-meta">Salt Lake City, UT · Expected May 2028</p>
+            <div class="edu-badges">
+              <span class="edu-badge">Generation Next Scholar</span>
+              <span class="edu-badge">NASA Space Grant Consortium Scholar</span>
+              <span class="edu-badge">WICHE Recipient</span>
             </div>
           </div>
         </div>
 
-        <!-- Employment -->
-        <div class="resume-block">
-          <h3 class="resume-block-title">Employment</h3>
-
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>University of Utah — Neuroergonomics and Occupational Biomechanics Laboratory</h4>
-                <p class="resume-subtitle">Research Assistant</p>
-              </div>
-              <span class="resume-date">Apr 2025 — Present</span>
-            </div>
-            <div class="resume-item-body">
-              <ul>
-                <li>Proposed an independent research project on occupational noise, muscle fatigue, and EMG analysis that was accepted for funding.</li>
-                <li>Collected and supported experimental data acquisition using Biosemi and E-Prime systems.</li>
-                <li>Analyzed EMG and biomechanical signals in MATLAB/EEGLAB to investigate workplace conditions' effects on muscle fatigue.</li>
-                <li>Presented findings at the U of U Undergraduate Research Symposium and Rocky Mountain ASB regional meeting.</li>
-              </ul>
+        <div class="edu-card">
+          <div class="edu-icon">🌏</div>
+          <div class="edu-body">
+            <h3>Singapore Management University</h3>
+            <p class="edu-degree">Data Management with SQL</p>
+            <p class="edu-meta">Singapore · Summer 2025</p>
+            <div class="edu-badges">
+              <span class="edu-badge">Benjamin A. Gilman International Scholar</span>
             </div>
           </div>
+        </div>
 
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>University of Utah Health</h4>
-                <p class="resume-subtitle">IT Support Technician</p>
-              </div>
-              <span class="resume-date">Oct 2025 — Mar 2026</span>
-            </div>
-            <div class="resume-item-body">
-              <ul>
-                <li>Supported SharePoint Online migration workflows, including site provisioning, permissions mapping, and data transfers.</li>
-                <li>Triaged IT tickets and documented fixes to build repeatable workflows for SharePoint/OneDrive support.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>Ocean Observatories Initiative</h4>
-                <p class="resume-subtitle">Data Analyst Intern</p>
-              </div>
-              <span class="resume-date">Jun 2025 — Aug 2025</span>
-            </div>
-            <div class="resume-item-body">
-              <ul>
-                <li>Developed Python scripts and Jupyter Notebook pipelines to retrieve, clean, and aggregate ~12 years of in-situ water temperature and CTD data via APIs and ERDDAP.</li>
-                <li>Created publication-quality plots in Matplotlib &amp; ggplot, overlaying ENSO phases on temperature trends.</li>
-                <li>Authored comprehensive documentation of ETL-style notebooks for interdisciplinary research teams.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>C.O.M.P.A.S.S | Alternative REU</h4>
-                <p class="resume-subtitle">Data Researcher Lead Intern</p>
-              </div>
-              <span class="resume-date">Jun 2024 — Aug 2024</span>
-            </div>
-            <div class="resume-item-body">
-              <ul>
-                <li>Designed and implemented a green roof model analyzing soil composition, moisture retention, and evapotranspiration for stormwater management research.</li>
-                <li>Conducted correlation and t-test analyses in Python; authored a research chapter for future publication.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <div>
-                <h4>University Centers for Excellence in Developmental Disabilities</h4>
-                <p class="resume-subtitle">Student Trainee</p>
-              </div>
-              <span class="resume-date">Jun 2023 — Jan 2024</span>
-            </div>
-            <div class="resume-item-body">
-              <ul>
-                <li>Assessed educational and assistive-technology needs of individuals with developmental disabilities.</li>
-                <li>Collaborated with interdisciplinary professionals and community advocates to design inclusive support solutions.</li>
-              </ul>
+        <div class="edu-card">
+          <div class="edu-icon">🏝️</div>
+          <div class="edu-body">
+            <h3>Northern Marianas College</h3>
+            <p class="edu-degree">A.A. Liberal Arts, Emphasis in Pre-Engineering · Magna Cum Laude Honors</p>
+            <p class="edu-meta">Saipan, MP · May 2022</p>
+            <div class="edu-badges">
+              <span class="edu-badge">NFTA-APIA Scholar</span>
+              <span class="edu-badge">NextGen Scholar</span>
+              <span class="edu-badge">Western Digital Scholar</span>
+              <span class="edu-badge">New Century Transfer Pathway Scholar</span>
             </div>
           </div>
         </div>
@@ -320,9 +555,32 @@
     </div>
   </section>
 
+  <!-- ===== Leadership Section ===== -->
+  <section id="leadership" class="section leadership">
+    <div class="container">
+      <p class="section-number">05</p>
+      <h2 class="section-title">Leadership &amp; Activities</h2>
+      <div class="leadership-card">
+        <div class="leadership-left">
+          <div class="leadership-icon">🏆</div>
+          <div>
+            <h3>Phi Theta Kappa — Beta Lambda Psi Chapter</h3>
+            <p class="leadership-role">Public Relations Officer &amp; HIA Lead</p>
+            <p class="leadership-meta">Saipan, MP · Oct 2023 — May 2024</p>
+          </div>
+        </div>
+        <ul class="timeline-bullets leadership-bullets">
+          <li>Led research efforts to create visually impactful representations of cultural engagement using qualitative analysis and technological tools, earning recognition from the International Society for innovative content creation.</li>
+          <li>Mentored students with disabilities by sharing research strategies and offering guidance, resulting in successful collaboration and a joint student-mentor presentation at the Mariana Islands Conservation Conference.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Contact Section ===== -->
   <section id="contact" class="section contact">
     <div class="container">
+      <p class="section-number">06</p>
       <h2 class="section-title">Get in Touch</h2>
       <p class="contact-subtitle">I'm always open to new opportunities, collaborations, and conversations.</p>
       <div class="contact-links">
@@ -346,13 +604,27 @@
           </svg>
           <span>Email</span>
         </a>
+        <a href="tel:3855304234" class="contact-card" id="link-phone">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.7a16 16 0 0 0 6.29 6.29l1.06-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Phone</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
-    <p>&copy; 2026 Ejay Aguirre. All rights reserved.</p>
+    <div class="footer-inner">
+      <p>© 2026 Ejay Aguirre · Salt Lake City, UT</p>
+      <div class="footer-links">
+        <a href="https://github.com/Ejay234" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/ejay-aguirre-797828222" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ejay.aguirre03@gmail.com">Email</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

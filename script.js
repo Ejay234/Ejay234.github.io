@@ -1,6 +1,7 @@
 /* ============================================================
    Ejay Aguirre — Island Theme Scripts
-   Theme toggle, nav, mobile menu, scroll animations
+   Theme toggle, nav, mobile menu, scroll animations,
+   typed text effect, scroll progress bar
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeBtn = document.getElementById('theme-toggle');
   const stored = localStorage.getItem('theme');
 
-  // Respect saved preference or system preference
   if (stored) {
     html.setAttribute('data-theme', stored);
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -24,10 +24,59 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', next);
   });
 
+  // ---- Scroll Progress Bar ----
+  const progressBar = document.getElementById('scroll-progress');
+  const updateProgress = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  };
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // ---- Typed Text Effect ----
+  const roles = [
+    'Data Scientist',
+    'GIS Analyst',
+    'Research Assistant',
+    'Environmental Data Analyst',
+    'Cyberinfrastructure Fellow',
+  ];
+  const typedEl = document.getElementById('typed-text');
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const TYPE_SPEED = 70;
+  const DELETE_SPEED = 40;
+  const PAUSE_MS = 1800;
+
+  function typeLoop() {
+    const current = roles[roleIndex];
+    if (!isDeleting) {
+      typedEl.textContent = current.slice(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(typeLoop, PAUSE_MS);
+        return;
+      }
+    } else {
+      typedEl.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+    }
+    setTimeout(typeLoop, isDeleting ? DELETE_SPEED : TYPE_SPEED);
+  }
+  typeLoop();
+
   // ---- Navbar scroll effect ----
   const navbar = document.getElementById('navbar');
   const onScroll = () => {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
+    updateProgress();
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -52,7 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Scroll-triggered animations ----
   const targets = document.querySelectorAll(
-    '.resume-block, .highlight-card, .about-text, .contact-card, .resume-actions'
+    '.highlight-card, .about-text, .contact-card, .timeline-item, ' +
+    '.edu-card, .leadership-card, .skill-category, .section-number, .section-title'
   );
   targets.forEach(el => el.classList.add('animate-on-scroll'));
 
@@ -65,13 +115,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
 
   targets.forEach((el, i) => {
-    el.style.transitionDelay = `${i * 60}ms`;
+    el.style.transitionDelay = `${i * 50}ms`;
     observer.observe(el);
   });
+
+  // ---- Skill tags staggered pop-in ----
+  const skillTags = document.querySelectorAll('.skill-tag');
+  const skillObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const tags = entry.target.querySelectorAll('.skill-tag');
+          tags.forEach((tag, i) => {
+            tag.style.opacity = '0';
+            tag.style.transform = 'translateY(8px)';
+            setTimeout(() => {
+              tag.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+              tag.style.opacity = '1';
+              tag.style.transform = 'translateY(0)';
+            }, i * 60);
+          });
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  document.querySelectorAll('.skill-category').forEach(cat => skillObserver.observe(cat));
 
   // ---- Smooth scroll for anchor links ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -92,16 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const highlightNav = () => {
     let current = '';
     sections.forEach(section => {
-      if (window.scrollY >= section.offsetTop - 100) {
+      if (window.scrollY >= section.offsetTop - 120) {
         current = section.getAttribute('id');
       }
     });
     navLinks.forEach(link => {
       link.style.color = '';
+      link.style.fontWeight = '';
       if (link.getAttribute('href') === `#${current}`) {
-        link.style.color = 'var(--text-primary)';
+        link.style.color = 'var(--accent)';
       }
     });
   };
   window.addEventListener('scroll', highlightNav, { passive: true });
+  highlightNav();
 });
