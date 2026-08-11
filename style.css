@@ -184,8 +184,7 @@ img { max-width:100%; display:block; }
 .timeline-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:14px; padding:22px 26px; transition:all var(--transition-fast); }
 .timeline-card:hover { border-color:var(--border-hover); background:var(--bg-card-hover); transform:translateX(4px); }
 
-.timeline-header { display:flex; gap:16px; align-items:flex-start; margin-bottom:14px; }
-.timeline-header-text { flex:1; min-width:0; }
+.timeline-header { margin-bottom:14px; }
 .timeline-meta { display:flex; align-items:center; gap:10px; margin-bottom:6px; flex-wrap:wrap; }
 .timeline-date { font-family:var(--font-mono); font-size:0.75rem; color:var(--accent); background:var(--accent-soft); padding:3px 10px; border-radius:6px; white-space:nowrap; }
 .timeline-badge { font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted); background:var(--bg-secondary); border:1px solid var(--border-subtle); padding:3px 8px; border-radius:4px; }
@@ -193,11 +192,6 @@ img { max-width:100%; display:block; }
 .timeline-role { font-size:0.85rem; color:var(--text-secondary); }
 .timeline-bullets { padding-left:20px; display:flex; flex-direction:column; gap:6px; }
 .timeline-bullets li { font-size:0.88rem; color:var(--text-secondary); line-height:1.65; }
-
-/* Org logos in timeline */
-.org-logo-wrap { flex-shrink:0; width:44px; height:44px; border-radius:10px; overflow:hidden; border:1px solid var(--border-subtle); background:var(--bg-card-hover); display:flex; align-items:center; justify-content:center; margin-top:2px; }
-.org-logo { width:44px; height:44px; object-fit:contain; padding:4px; }
-.org-logo-fallback { width:44px; height:44px; display:none; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:0.65rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:10px; letter-spacing:0.04em; }
 
 /* ---------- Education Section ---------- */
 .education { background:var(--bg-secondary); transition:background 0.5s ease; }
