@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close on outside click
   document.addEventListener('click', (e) => {
-    if (!a11yPanel.contains(e.target) && e.target !== a11yBtn) closePanel();
+    if (!a11yPanel.contains(e.target) && !a11yBtn.contains(e.target)) closePanel();
   });
   // Close on Escape
   document.addEventListener('keydown', (e) => {
@@ -218,8 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Font Size ──
-  // sm/lg are intentionally wide apart so the change is obviously visible
-  const fontScales = { sm: 0.78, md: 1, lg: 1.38 };
+  // Directly sets html element font-size so ALL rem units cascade site-wide
+  const fontSizes = { sm: '13px', md: '17px', lg: '23px' };
   const fontBtns = {
     sm: document.getElementById('font-sm'),
     md: document.getElementById('font-md'),
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const applyFontScale = (size) => {
-    document.documentElement.style.setProperty('--font-size-scale', String(fontScales[size]));
+    document.documentElement.style.fontSize = fontSizes[size];
     localStorage.setItem('fontScale', size);
     Object.entries(fontBtns).forEach(([k, btn]) => {
       btn.classList.toggle('active', k === size);
