@@ -196,12 +196,8 @@ img { max-width:100%; display:block; }
 /* ---------- Education Section ---------- */
 .education { background:var(--bg-secondary); transition:background 0.5s ease; }
 .edu-grid { display:flex; flex-direction:column; gap:20px; }
-.edu-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:16px; padding:28px 32px; display:flex; gap:24px; align-items:flex-start; transition:all var(--transition-fast); }
+.edu-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:16px; padding:28px 32px; transition:all var(--transition-fast); }
 .edu-card:hover { border-color:var(--border-hover); background:var(--bg-card-hover); transform:translateX(4px); }
-.edu-logo-wrap { flex-shrink:0; width:60px; height:60px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:var(--bg-card-hover); display:flex; align-items:center; justify-content:center; margin-top:2px; }
-.edu-logo { width:60px; height:60px; object-fit:contain; padding:6px; }
-.edu-logo-fallback { width:60px; height:60px; display:none; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:0.7rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:12px; letter-spacing:0.04em; }
-.edu-body { flex:1; }
 .edu-body h3 { font-size:1.05rem; font-weight:700; margin-bottom:4px; color:var(--text-primary); }
 .edu-degree { font-size:0.9rem; color:var(--text-secondary); margin-bottom:4px; }
 .edu-meta { font-family:var(--font-mono); font-size:0.78rem; color:var(--accent); margin-bottom:14px; }
