@@ -549,6 +549,41 @@
     </div>
   </footer>
 
+  <!-- ===== Accessibility Panel ===== -->
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-label="Accessibility options" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3>Accessibility</h3>
+      <button id="a11y-close" class="a11y-close" aria-label="Close accessibility panel">✕</button>
+    </div>
+    <div class="a11y-row">
+      <span class="a11y-label">Text Size</span>
+      <div class="a11y-font-btns" role="group" aria-label="Text size options">
+        <button class="a11y-font-btn" id="font-sm" aria-label="Small text">A−</button>
+        <button class="a11y-font-btn active" id="font-md" aria-label="Default text">A</button>
+        <button class="a11y-font-btn" id="font-lg" aria-label="Large text">A+</button>
+      </div>
+    </div>
+    <div class="a11y-row">
+      <span class="a11y-label">High Contrast</span>
+      <button id="contrast-toggle" class="a11y-toggle" role="switch" aria-checked="false" aria-label="Toggle high contrast">
+        <span class="a11y-toggle-track"><span class="a11y-toggle-thumb"></span></span>
+      </button>
+    </div>
+    <div class="a11y-row">
+      <span class="a11y-label">Reduce Motion</span>
+      <button id="motion-toggle" class="a11y-toggle" role="switch" aria-checked="false" aria-label="Toggle reduce motion">
+        <span class="a11y-toggle-track"><span class="a11y-toggle-thumb"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <button id="a11y-btn" class="a11y-btn" aria-label="Open accessibility options" aria-expanded="false" aria-controls="a11y-panel">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/>
+      <path d="M5 9h14M12 9v11M8 14l4 2 4-2"/>
+    </svg>
+  </button>
+
   <script src="script.js"></script>
 </body>
 </html>

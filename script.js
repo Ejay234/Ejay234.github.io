@@ -182,4 +182,86 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', highlightNav, { passive: true });
   highlightNav();
+
+  // ─────────────────────────────────────────────
+  // Accessibility Panel
+  // ─────────────────────────────────────────────
+  const a11yBtn   = document.getElementById('a11y-btn');
+  const a11yPanel = document.getElementById('a11y-panel');
+  const a11yClose = document.getElementById('a11y-close');
+
+  const openPanel = () => {
+    a11yPanel.classList.add('open');
+    a11yPanel.setAttribute('aria-hidden', 'false');
+    a11yBtn.setAttribute('aria-expanded', 'true');
+    a11yClose.focus();
+  };
+  const closePanel = () => {
+    a11yPanel.classList.remove('open');
+    a11yPanel.setAttribute('aria-hidden', 'true');
+    a11yBtn.setAttribute('aria-expanded', 'false');
+    a11yBtn.focus();
+  };
+
+  a11yBtn.addEventListener('click', () => {
+    a11yPanel.classList.contains('open') ? closePanel() : openPanel();
+  });
+  a11yClose.addEventListener('click', closePanel);
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!a11yPanel.contains(e.target) && e.target !== a11yBtn) closePanel();
+  });
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && a11yPanel.classList.contains('open')) closePanel();
+  });
+
+  // ── Font Size ──
+  const fontScales = { sm: 0.88, md: 1, lg: 1.18 };
+  const fontBtns = {
+    sm: document.getElementById('font-sm'),
+    md: document.getElementById('font-md'),
+    lg: document.getElementById('font-lg'),
+  };
+
+  const applyFontScale = (size) => {
+    html.style.setProperty('--font-size-scale', fontScales[size]);
+    localStorage.setItem('fontScale', size);
+    Object.entries(fontBtns).forEach(([k, btn]) => {
+      btn.classList.toggle('active', k === size);
+    });
+  };
+
+  const savedScale = localStorage.getItem('fontScale') || 'md';
+  applyFontScale(savedScale);
+
+  fontBtns.sm.addEventListener('click', () => applyFontScale('sm'));
+  fontBtns.md.addEventListener('click', () => applyFontScale('md'));
+  fontBtns.lg.addEventListener('click', () => applyFontScale('lg'));
+
+  // ── High Contrast ──
+  const contrastBtn = document.getElementById('contrast-toggle');
+  const applyContrast = (on) => {
+    html.classList.toggle('high-contrast', on);
+    contrastBtn.setAttribute('aria-checked', String(on));
+    localStorage.setItem('highContrast', on);
+  };
+  applyContrast(localStorage.getItem('highContrast') === 'true');
+  contrastBtn.addEventListener('click', () => {
+    applyContrast(!html.classList.contains('high-contrast'));
+  });
+
+  // ── Reduce Motion ──
+  const motionBtn = document.getElementById('motion-toggle');
+  const applyMotion = (on) => {
+    html.classList.toggle('force-reduce-motion', on);
+    motionBtn.setAttribute('aria-checked', String(on));
+    localStorage.setItem('forceReduceMotion', on);
+  };
+  applyMotion(localStorage.getItem('forceReduceMotion') === 'true');
+  motionBtn.addEventListener('click', () => {
+    applyMotion(!html.classList.contains('force-reduce-motion'));
+  });
+
 });
