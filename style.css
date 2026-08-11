@@ -673,11 +673,12 @@ img { max-width: 100%; display: block; }
 .a11y-close:hover { color: var(--text-primary); background: var(--accent-soft); }
 
 .a11y-row {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 14px;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  margin-bottom: 16px;
 }
 .a11y-row:last-child { margin-bottom: 0; }
-.a11y-label { font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); }
+.a11y-label { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); display: block; }
+.a11y-hint  { font-size: 0.72rem; color: var(--text-muted); margin: 2px 0 0; line-height: 1.4; }
 
 /* Font size buttons */
 .a11y-font-btns { display: flex; gap: 4px; }

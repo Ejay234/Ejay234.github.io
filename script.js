@@ -218,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Font Size ──
-  const fontScales = { sm: 0.88, md: 1, lg: 1.18 };
+  // sm/lg are intentionally wide apart so the change is obviously visible
+  const fontScales = { sm: 0.78, md: 1, lg: 1.38 };
   const fontBtns = {
     sm: document.getElementById('font-sm'),
     md: document.getElementById('font-md'),
@@ -226,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const applyFontScale = (size) => {
-    html.style.setProperty('--font-size-scale', fontScales[size]);
+    document.documentElement.style.setProperty('--font-size-scale', String(fontScales[size]));
     localStorage.setItem('fontScale', size);
     Object.entries(fontBtns).forEach(([k, btn]) => {
       btn.classList.toggle('active', k === size);

@@ -556,7 +556,10 @@
       <button id="a11y-close" class="a11y-close" aria-label="Close accessibility panel">✕</button>
     </div>
     <div class="a11y-row">
-      <span class="a11y-label">Text Size</span>
+      <div>
+        <span class="a11y-label">Text Size</span>
+        <p class="a11y-hint">Scale all text up or down</p>
+      </div>
       <div class="a11y-font-btns" role="group" aria-label="Text size options">
         <button class="a11y-font-btn" id="font-sm" aria-label="Small text">A−</button>
         <button class="a11y-font-btn active" id="font-md" aria-label="Default text">A</button>
@@ -564,13 +567,19 @@
       </div>
     </div>
     <div class="a11y-row">
-      <span class="a11y-label">High Contrast</span>
+      <div>
+        <span class="a11y-label">High Contrast</span>
+        <p class="a11y-hint">Boosts text/border contrast</p>
+      </div>
       <button id="contrast-toggle" class="a11y-toggle" role="switch" aria-checked="false" aria-label="Toggle high contrast">
         <span class="a11y-toggle-track"><span class="a11y-toggle-thumb"></span></span>
       </button>
     </div>
     <div class="a11y-row">
-      <span class="a11y-label">Reduce Motion</span>
+      <div>
+        <span class="a11y-label">Reduce Motion</span>
+        <p class="a11y-hint">Stops all animations</p>
+      </div>
       <button id="motion-toggle" class="a11y-toggle" role="switch" aria-checked="false" aria-label="Toggle reduce motion">
         <span class="a11y-toggle-track"><span class="a11y-toggle-thumb"></span></span>
       </button>
@@ -578,9 +587,9 @@
   </div>
 
   <button id="a11y-btn" class="a11y-btn" aria-label="Open accessibility options" aria-expanded="false" aria-controls="a11y-panel">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/>
-      <path d="M5 9h14M12 9v11M8 14l4 2 4-2"/>
+    <!-- Standard Material Design Accessibility Icon -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
     </svg>
   </button>
 
