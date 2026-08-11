@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ─────────────────────────────────────────────
+  // Logo src-swap (light ↔ dark via data attributes)
+  // ─────────────────────────────────────────────
+  const updateLogos = (theme) => {
+    document.querySelectorAll('[data-dark][data-light]').forEach(img => {
+      img.src = theme === 'dark' ? img.dataset.dark : img.dataset.light;
+    });
+  };
+
+  // ─────────────────────────────────────────────
   // Theme Toggle (with smooth crossfade)
   // ─────────────────────────────────────────────
   const themeBtn = document.getElementById('theme-toggle');
@@ -17,9 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const applyTheme = (theme, animate) => {
     if (animate && !prefersReducedMotion) {
       document.body.classList.add('theme-transitioning');
-      const tid = setTimeout(() => document.body.classList.remove('theme-transitioning'), 250);
+      setTimeout(() => document.body.classList.remove('theme-transitioning'), 250);
     }
     html.setAttribute('data-theme', theme);
+    updateLogos(theme);
   };
 
   if (stored) {
@@ -114,8 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Scroll-triggered animations (IntersectionObserver)
   // ─────────────────────────────────────────────
   if (!prefersReducedMotion) {
+    // Only animate cards/items — NOT section headings (they should always be visible)
     const targets = document.querySelectorAll(
-      '.highlight-card, .about-text, .contact-card, .timeline-item, .edu-card, .achievement-item, .section-number, .section-title'
+      '.highlight-card, .about-text, .contact-card, .timeline-item, .edu-card, .achievement-item'
     );
     targets.forEach(el => el.classList.add('animate-on-scroll'));
 
@@ -128,11 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px 0px 0px' }
     );
 
     targets.forEach((el, i) => {
-      el.style.transitionDelay = `${i * 40}ms`;
+      el.style.transitionDelay = `${Math.min(i * 35, 200)}ms`;
       observer.observe(el);
     });
   }
